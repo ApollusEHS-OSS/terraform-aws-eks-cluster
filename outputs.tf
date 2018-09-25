@@ -30,7 +30,7 @@ output "eks_cluster_arn" {
 
 output "eks_cluster_certificate_authority_data" {
   description = "The base64 encoded certificate data required to communicate with the cluster"
-  value       = "${join("", aws_eks_cluster.default.*.certificate_authority.0.data)}"
+  value       = "${join("", aws_eks_cluster.default.*.certificate_authority.data)}"
 }
 
 output "eks_cluster_endpoint" {
